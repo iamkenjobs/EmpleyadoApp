@@ -25,7 +25,7 @@ class DataService {
         return employees
     }
     
-    func udpateEmployee(employee: Employee) {
+    func updateEmployee(employee: Employee) {
         
     }
 }
