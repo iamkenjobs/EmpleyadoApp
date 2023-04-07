@@ -22,11 +22,14 @@ struct EmployeesView: View {
     var body: some View {
         NavigationView {
             List(viewModel.employees, id: \.id) { employee in
-                Text("Employee: \(employee.firstName)")
-                    .onTapGesture {
-                        self.viewModel.selectedEmployee = employee
-                        self.isDetailPresented = true
-                    }
+                HStack {
+                    Text("Employee: \(employee.firstName)")
+                }
+                .onTapGesture {
+                    self.viewModel.selectedEmployee = employee
+                    self.isDetailPresented = true
+                }
+
             }
             .toolbar {
                 Button("Add") {
